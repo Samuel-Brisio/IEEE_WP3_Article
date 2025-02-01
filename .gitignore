@@ -1,0 +1,34 @@
+# Temp Directory
+Sam/
+Glhrm/
+
+#Backup Directory
+Backups/
+
+# Output file
+Arquivos/
+Volumes/Output/
+
+# Python Virtual Environment
+Scripts/Python_Script/venv/
+
+# Tmp files
+*.swp
+
+# Python cache
+Scripts/Python_Script/__pycache__/
+
+
+# Files
+Deploy/servers_more_resources.yaml
+Imagens/SMD/old-Dockerfile
+Imagens/SMD/smdAnterior.c
+Imagens/SMD/smdAnterior2.c
+Imagens/SMD/smdAnterior3.c
+Imagens/SMD/smdAnterior4.c
+Scripts/Python_Script/OLD_tcp_loss.py
+Scripts/Python_Script/unique.py
+Scripts/fase_01/teste.sh
+Volumes/erro_misterioso.tar.gz
+Volumes/error_tcp.tar.gz
+Volumes/smd_v2.c

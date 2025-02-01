@@ -1,0 +1,86 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: smd1
+  annotations:
+    cni.projectcalico.org/ipAddrs: "[\"10.128.10.30\"]"
+spec:
+  volumes:
+  - name: vol
+    hostPath:
+      path: /vol
+  containers:
+  - name: smd1
+    volumeMounts:
+      - name: vol
+        mountPath: /app/data  # in the container filesystem
+    image: smd-metrica:wp3.v1
+    command: ['sh', '-c', './smd 50001 50002 10.128.20.30 smd1/']
+    ports:
+      - containerPort: 50001
+        protocol: UDP
+        name: porta-1
+    ports:
+      - containerPort: 50002
+        protocol: TCP
+        name: porta-2
+  nodeSelector:
+    rede: '1'
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: smd2
+  annotations:
+    cni.projectcalico.org/ipAddrs: "[\"10.128.20.30\"]"
+spec:
+  volumes:
+  - name: vol
+    hostPath:
+      path: /vol
+  containers:
+  - name: smd2
+    volumeMounts:
+      - name: vol
+        mountPath: /app/data  # in the container filesystem
+    image: smd-metrica:wp3.v1
+    command: ['sh', '-c', './smd 50001 50002 10.128.30.30 smd2/']
+    ports:
+      - containerPort: 50001
+        protocol: UDP
+        name: porta-1
+    ports:
+      - containerPort: 50002
+        protocol: TCP
+        name: porta-2
+  nodeSelector:
+    rede: '2'
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: smd3
+  annotations:
+    cni.projectcalico.org/ipAddrs: "[\"10.128.30.30\"]"
+spec:
+  volumes:
+  - name: vol
+    hostPath:
+      path: /vol
+  containers:
+  - name: smd3
+    volumeMounts:
+      - name: vol
+        mountPath: /app/data  # in the container filesystem
+    image: smd-metrica:wp3.v1
+    command: ['sh', '-c', './smd 50001 50002 10.128.10.30 smd3/']
+    ports:
+      - containerPort: 50001
+        protocol: UDP
+        name: porta-1
+    ports:
+      - containerPort: 50002
+        protocol: TCP
+        name: porta-2
+  nodeSelector:
+    rede: '3'

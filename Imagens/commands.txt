@@ -1,0 +1,5 @@
+docker build -t bonesi:wp3.v1 .
+docker build -t kind-cni:wp3.v1 .
+docker build -t snort:wp3.v1
+docker build -t smd:wp3.v1
+docker build -t iot:wp3.v1
