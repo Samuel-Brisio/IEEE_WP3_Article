@@ -7,18 +7,99 @@ This repository contains the simulation file and the necessary codes to process 
 
 ## Contents
 
-- **`14NodesPV.pfd`**: Contains the simulation file with parameters and the environment ready to simulate the IEEE 14-node system with the integration of distributed generation based on solar systems.
 
-- **`Import_without_DER.m`**: A MATLAB script to organize voltage and current data exported from the PowerFactory simulation without any distributed energy resource integration.
+## How to Execute this code
 
-- **`Import_with_DER.m`**: A MATLAB script to organize voltage and current data exported from the PowerFactory simulation when a distributed energy resource is integrated.
+### System Information
 
-- **`EMTSignalAnalyzer_Installer_LINK.txt`**: A file containing the link to the Google Drive folder for downloading the EMTSignalAnalyzer program. This program was developed in MATLAB by the authors to facilitate EMT signal analysis. The input for this program requires a folder containing `.mat` files with the EMT signals to be analyzed, which can be obtained after using the "Import_with_DER" script. The program can easily display graphs and allows data export for future analyses.
+#### Hardware Used
+
+Hard Drive Memory: 450 MB
+RAM: 32 GB
+Processor: 
 
 
-- **`1 MW`**: A folder containing `.mat` files for different connection angles for a 1 MW distributed resource based on solar systems.
+#### Software Used
 
-- **`Analyze_mat.ipynb`**: A Jupyter Notebook in Python that analyzes the `.mat` files. This program allows for displaying the results from the paper.
+Operating System: Ubuntu 22.04.2 LTS               
+Kernel: Linux 5.15.0-130-generic
+Docker: 24.0.2
+KIND: v0.17.0 (versão do go: go1.19.2), enquanto para a kind node image é a kindest/node:v1.25.3 (modificada).
+Kubectl: 1.27.2
+
+### Creating Kubernet Environment
+
+#### Creating Image
+
+Go to the folder "Imagens", then read the README for the instructions to create the images
+
+#### Setup the Environment
+
+Inside the folder of this repository execute the following commandas.
+
+##### Create the Kubernet Environment
+```
+./setup_environment.sh
+```
+
+##### Isolate the Environment
+
+To isolate the environment from acessing the internet we need to know the ip address the kubernet create in the previus command use.
+
+
+Exemple
+
+
+```
+$ kubectl get nodes -o wide
+NAME                STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+wp3-control-plane   Ready    control-plane   20d   v1.25.3   172.18.0.5    <none>        Ubuntu 22.04.1 LTS   5.15.0-73-generic   containerd://1.6.9
+wp3-worker          Ready    <none>          20d   v1.25.3   172.18.0.2    <none>        Ubuntu 22.04.1 LTS   5.15.0-73-generic   containerd://1.6.9
+wp3-worker2         Ready    <none>          20d   v1.25.3   172.18.0.3    <none>        Ubuntu 22.04.1 LTS   5.15.0-73-generic   containerd://1.6.9
+wp3-worker3         Ready    <none>          20d   v1.25.3   172.18.0.4    <none>        Ubuntu 22.04.1 LTS   5.15.0-73-generic   containerd://1.6.9
+wp3-worker4         Ready    <none>          20d   v1.25.3   172.18.0.6    <none>        Ubuntu 22.04.1 LTS   5.15.0-73-generic   containerd://1.6.9
+```
+Therefore in this case the environment uses 172.18.0.0 range, so when executing `sudo iptables -t nat -L POSTROUTING` we get a list of ip rules inclusive the one connecting the Testbed to the internet.
+
+```
+$ sudo iptables -t nat -L POSTROUTING
+
+Chain POSTROUTING (policy ACCEPT)
+target     prot opt    source        destination         
+MASQUERADE  all  --  172.17.0.0/16    anywhere            
+MASQUERADE  tcp  --  172.18.0.5       172.18.0.5    tcp dpt:6443
+MASQUERADE  all  --  172.18.0.0/16    anywhere 
+```
+
+To remove the rule that connects the cluster to the Internet, it is necessary to identify its position and remove it by executing the command below. For example, the rule that connects the cluster to the Internet is located at position 3.
+
+```
+$ sudo iptables -t nat -D POSTROUTING 3
+```
+
+##### OVS Configuration
+```
+./Deploy/OVS/creating_network.sh
+./Deploy/OVS/config_network.sh
+```
+
+### Executing the Environment
+
+
+#### Run the experiments
+```
+./Scripts/fase_04/batch.sh <Number-of-Emulation>
+# Exemple -> To run 35 emulations
+./Scripts/fase_04/batch.sh 35
+```
+
+#### Getting the metrics from the raw data
+[Preciso mudar os caminhos do arquivo]
+```
+./Scripts/fase_04/analysis.sh <OUTPUT_DIR> <RAW_DATA_DIR>
+# Exemple
+./Scripts/fase_04/analysis.sh Analysis Arquivos
+```
 
 ## Contact
 
