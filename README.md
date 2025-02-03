@@ -22,7 +22,7 @@ Explain the files
 
 `Deploy/OVS/config_network.sh` : Contains the ip rules used to ensure the correct pods' comunication 
 
-`Scripts/fase_04/batch.sh` :
+`Scripts/fase_04/batch.sh` : This script is responsible for running the emulation. It initializes the pods, stores the data in a temporary folder called "Volume/Output," and, once the emulation is complete, compresses the data into a .tar.gz file before moving it to "Emulation_Raw_Data."
 
 `Scripts/fase_04/analysis.sh` :
 
