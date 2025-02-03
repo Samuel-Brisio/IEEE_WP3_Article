@@ -24,7 +24,7 @@ Explain the files
 
 `Scripts/fase_04/batch.sh` : This script is responsible for running the emulation. It initializes the pods, stores the data in a temporary folder called "Volume/Output," and, once the emulation is complete, compresses the data into a .tar.gz file before moving it to "Emulation_Raw_Data."
 
-`Scripts/fase_04/analysis.sh` : 
+`Scripts/fase_04/analysis.sh` :  This script calls multiple Python programs to compute metrics for each emulation present in the specified folder.
 
 ## How to Execute this code
 
