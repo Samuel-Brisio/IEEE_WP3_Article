@@ -14,18 +14,18 @@ This repository contains the simulation file and the necessary codes to process 
 
 #### Hardware Used
 
-Hard Drive Memory: 450 MB
-RAM: 32 GB
-Processor: 
+Hard Drive Memory: 450 MB  
+RAM: 32 GB  
+Processor:   
 
 
 #### Software Used
 
 Operating System: Ubuntu 22.04.2 LTS               
-Kernel: Linux 5.15.0-130-generic
-Docker: 24.0.2
-KIND: v0.17.0 (versão do go: go1.19.2), enquanto para a kind node image é a kindest/node:v1.25.3 (modificada).
-Kubectl: 1.27.2
+Kernel: Linux 5.15.0-130-generic   
+Docker: 24.0.2  
+KIND: v0.17.0 (versão do go: go1.19.2), enquanto para a kind node image é a kindest/node:v1.25.3 (modificada).  
+Kubectl: 1.27.2  
 
 ### Creating Kubernet Environment
 
