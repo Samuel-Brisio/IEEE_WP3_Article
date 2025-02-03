@@ -9,11 +9,11 @@ OUTPUT_DIR=$1
 DIR_EMULATIONS=$2
 
 # Directory that contain the Python and Shell scripts
-SHELL_SCRIPT="/wp3-experiment/Scripts/Shell_Script"
-PYTHON_SCRIPT="/wp3-experiment/Scripts/Python_Script"
+SHELL_SCRIPT="./Scripts/Shell_Script"
+PYTHON_SCRIPT="./Scripts/Python_Script"
 
 # Path to the file that contains the ip address of all the devices in the experiment
-IOT_SERVER_IP_ADDR="/wp3-experiment/Scripts/Python_Script/ips.json"
+IOT_SERVER_IP_ADDR="./Scripts/Python_Script/ips.json"
 
 # Activate the python virtual envinronment 
 source "$PYTHON_SCRIPT/venv/bin/activate"
