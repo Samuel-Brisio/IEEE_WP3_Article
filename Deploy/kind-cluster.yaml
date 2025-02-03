@@ -15,7 +15,7 @@ nodes:
 #REDE-01
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 1
@@ -23,7 +23,7 @@ nodes:
 #REDE-01
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 2
@@ -31,7 +31,7 @@ nodes:
 #REDE-01
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 3
@@ -39,7 +39,7 @@ nodes:
 #REDE-02
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 4
@@ -47,7 +47,7 @@ nodes:
 #REDE-02
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 5
@@ -55,7 +55,7 @@ nodes:
 #REDE-02
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 6
@@ -63,7 +63,7 @@ nodes:
 #REDE-03
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 7
@@ -71,7 +71,7 @@ nodes:
 #REDE-03
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 8
@@ -79,7 +79,7 @@ nodes:
 #REDE-03
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 9
@@ -87,7 +87,7 @@ nodes:
 #REDE-04
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 10
@@ -95,7 +95,7 @@ nodes:
 #REDE-04
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 11
@@ -103,7 +103,7 @@ nodes:
 #REDE-04
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 12
@@ -111,7 +111,7 @@ nodes:
 #REDE-05
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 13
@@ -119,7 +119,7 @@ nodes:
 #REDE-05
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 14
@@ -127,7 +127,7 @@ nodes:
 #REDE-05
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 15
@@ -135,9 +135,9 @@ nodes:
 #REDE-06
 - role: worker
   extraMounts:
-    - hostPath: /wp3-experiment/Volumes
+    - hostPath: ./Volumes
       containerPath: /vol
   labels:
     rede: 16
 
-#/wp3-experiment/Volumes == pasta pessoal
+#./Volumes == pasta pessoal
