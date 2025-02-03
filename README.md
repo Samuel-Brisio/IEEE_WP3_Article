@@ -9,18 +9,22 @@ This repository contains the simulation file and the necessary codes to process 
 
 Explain the folders
 
-Deploy
-Imagens
-Scripts
-Volumes
+`Deploy` : This folder contains 
+`Imagens` : 
+`Scripts` : 
+`Volumes` : 
 
 Explain the files
 
-setup_environment.sh
-Deploy/OVS/config_network.sh
-Deploy/OVS/creating_network.sh
-Scripts/fase_04/batch.sh
-Scripts/fase_04/analysis.sh
+`setup_environment.sh` : A bash script that create the testbed environment and apply the ippool and felix configuration
+
+`Deploy/OVS/creating_network.sh` : This file creates the infrastructure bitween the pods
+
+`Deploy/OVS/config_network.sh` : Contains the ip rules used to ensure the correct pods' comunication 
+
+`Scripts/fase_04/batch.sh` :
+
+`Scripts/fase_04/analysis.sh` :
 
 ## How to Execute this code
 
@@ -55,6 +59,13 @@ pip install -r requirements.txt
 ```
 
 ### Creating Kubernet Environment
+
+To create the kubernet Environment it's need to do the following steps:
+- Create Image
+- Setup Environment
+    - Create Environment
+    - Isolate Environment
+    - OVS Configuration
 
 #### Creating Image
 
