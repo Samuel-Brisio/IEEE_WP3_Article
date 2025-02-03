@@ -9,22 +9,22 @@ This repository contains the simulation file and the necessary codes to process 
 
 Explain the folders
 
-`Deploy` : This folder contains 
-`Imagens` : 
-`Scripts` : 
-`Volumes` : 
+`Deploy` : This folder contains  
+`Imagens` :  
+`Scripts` :  
+`Volumes` :  
 
 Explain the files
 
-`setup_environment.sh` : A bash script that create the testbed environment and apply the ippool and felix configuration
+`setup_environment.sh` : A Bash script that sets up the testbed environment and applies the IP pool and Felix configuration.
 
-`Deploy/OVS/creating_network.sh` : This file creates the infrastructure bitween the pods
+`Deploy/OVS/creating_network.sh` : This script sets up the network infrastructure between the pods.
 
-`Deploy/OVS/config_network.sh` : Contains the ip rules used to ensure the correct pods' comunication 
+`Deploy/OVS/config_network.sh` : This file defines the IP rules necessary to ensure proper communication between pods.
 
 `Scripts/fase_04/batch.sh` : This script is responsible for running the emulation. It initializes the pods, stores the data in a temporary folder called "Volume/Output," and, once the emulation is complete, compresses the data into a .tar.gz file before moving it to "Emulation_Raw_Data."
 
-`Scripts/fase_04/analysis.sh` :
+`Scripts/fase_04/analysis.sh` : 
 
 ## How to Execute this code
 
