@@ -24,7 +24,7 @@ calicoctl apply -f Deploy/felix_config.yaml
 #
 # Preciso mudar os nomes das imagens
 #
-kind load docker-image bonesi:wp3.v2 snort:wp3.v5 iot:wp3.v2 smd-metrica:wp3.v4 smd-metrica:wp3.v3 --name wp3
+kind load docker-image bonesi:wp3.v2 snort:wp3.v5 iot:wp3.v2 smd-metrica:wp3.v5 --name wp3
 
 # Enable IP Spoofing
 docker exec wp3-worker16 sysctl -w "net.ipv4.conf.all.rp_filter=0"
