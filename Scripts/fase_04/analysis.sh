@@ -3,6 +3,7 @@
 
 # Pasta de destino para os arquivos gerados pela execução desse script
 OUTPUT_DIR=$1
+mkdir -p "$OUTPUT_DIR"
 
 # Pasta que contem as emulações de uma fase já descompactados
 # A caminho do diretório não pode conter "/" no final
@@ -52,7 +53,7 @@ do
     mkdir -p "$OUTPUT_DIR/$emulation_name/Delay/UDP"
 
     # Path to an emulation
-    emulation_path="$DIR_EMULATIONS""$emulation_name/wp3-experiment/Volumes/Output"
+    emulation_path="$DIR_EMULATIONS""$emulation_name/Volumes/Output"
 
     # GET the time of the experiment start
     file_emulation_start_time="$emulation_path/tempo_inicializacao.txt"

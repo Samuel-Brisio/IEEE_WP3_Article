@@ -54,8 +54,9 @@ Python: 3.10.12
 
 Go inside the folder "Scripts/Python_Script" and execute
 
+`python -m venv venv` or `python3 -m venv venv`
+
 ```
-python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -75,7 +76,7 @@ Go to the folder "Imagens", then read the README for the instructions to create 
 
 #### Setup the Environment
 
-Inside the folder of this repository execute the following commandas.
+Inside the root folder of this repository execute the following commandas.
 
 ##### Create the Kubernet Environment
 Execute the script located in the repository's root folder.
@@ -156,9 +157,10 @@ And execute the script to compute the metrics.
 ```
 ./Scripts/fase_04/analysis.sh <OUTPUT_DIR> <RAW_DATA_DIR>
 # Exemple
-./Scripts/fase_04/analysis.sh Analysis Emulation_Raw_Data/05022025_1742
+./Scripts/fase_04/analysis.sh Analysis/ Emulation_Raw_Data/05022025_1742
 ```
-
+> Warning
+> The first path parameter need to end with '/'
 
 ## Contact
 
