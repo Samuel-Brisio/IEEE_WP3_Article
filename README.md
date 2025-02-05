@@ -7,14 +7,17 @@ This repository contains the simulation file and the necessary codes to process 
 
 ## Contents
 
-Explain the folders
+### Folder
 
-`Deploy` : This folder contains  
-`Imagens` :  
-`Scripts` :  
-`Volumes` :  
+`Deploy` : This folder contains Kubernetes manifests and the testbed Kubernetes configuration.
 
-Explain the files
+`Imagens` : This folder contains files responsible for creating Docker images.
+
+`Scripts` : This folder contains multiple scripts responsible for collecting metrics and running the experiment.
+
+`Volumes` : This folder temporarily holds the output files from the emulation and stores data from real IoT devices used to emulate IoT devices in the experiment.
+
+### Files
 
 `setup_environment.sh` : A Bash script that sets up the testbed environment and applies the IP pool and Felix configuration.
 
@@ -34,7 +37,6 @@ Explain the files
 
 Hard Drive Memory: 450 MB  
 RAM: 32 GB  
-Processor:   
 
 
 #### Software Used
