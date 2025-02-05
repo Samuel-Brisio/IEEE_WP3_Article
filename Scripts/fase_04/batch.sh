@@ -53,7 +53,7 @@ do
 	touch $BASE_PATH/Volumes/Output/tempo_inicializacao.txt
 	
 	# Change the permition to anyone can read and write
-	chmod a+rw $BASE_PATH/Volumes/Output/tempo_inicializacao.txt
+	sudo chmod a+rw $BASE_PATH/Volumes/Output/tempo_inicializacao.txt
 	
 	# Save the epoch time inside the file
 	echo "time inicialization: $epoch_time" > $BASE_PATH/Volumes/Output/tempo_inicializacao.txt
@@ -65,7 +65,7 @@ do
 	$BASE_PATH/Scripts/fase_04/rand_start.sh $RANDOM
 	
 	# Change the permition of all the files inside the output folder
-	chmod -R a+rw $BASE_PATH/Volumes/Output
+	sudo chmod -R a+rw $BASE_PATH/Volumes/Output
 
 	# Convert the pcaps files to csv files
 	#$BASE_PATH/Scripts/Shell_Script/convert_pcap_csv.sh "$OUTPUT_VOL/Server/Server_01" "server1.pcap"
@@ -75,7 +75,7 @@ do
 	# Collect the metrics
 	#$BASE_PATH/Scripts/Shell_Script/magic.sh $BASE_PATH/Volumes/Output 2
 
-	chmod -R a+rw $BASE_PATH/Volumes/Output	
+	sudo chmod -R a+rw $BASE_PATH/Volumes/Output	
 
 	# Get the current date and time to name the file
 	current_time=$(date +"%H%M")

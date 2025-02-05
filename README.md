@@ -136,9 +136,9 @@ $ sudo iptables -t nat -D POSTROUTING 3
 
 #### Run the experiments
 ```
-./Scripts/fase_04/batch.sh <Number-of-Emulation>
+sudo ./Scripts/fase_04/batch.sh <Number-of-Emulation>
 # Exemple -> To run 35 emulations
-./Scripts/fase_04/batch.sh 35
+sudo ./Scripts/fase_04/batch.sh 35
 ```
 
 Each emulation will be save in a compact format inside the folder Emulation_Raw_Data
