@@ -117,6 +117,11 @@ To remove the rule that connects the cluster to the Internet, it is necessary to
 $ sudo iptables -t nat -D POSTROUTING 3
 ```
 
+>Warning
+>To execute the script ./setup_environment.sh, the cluster must have internet access. If the connection was removed using the previous steps, reconnect the environment by running the command below.
+`$ sudo iptables -t nat -I POSTROUTING -s 172.18.0.1/16 -j MASQUERADE`
+
+
 ##### OVS Configuration
 ```
 ./Deploy/OVS/creating_network.sh
