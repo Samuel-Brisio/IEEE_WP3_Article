@@ -157,10 +157,10 @@ And execute the script to compute the metrics.
 ```
 ./Scripts/fase_04/analysis.sh <OUTPUT_DIR> <RAW_DATA_DIR>
 # Exemple
-./Scripts/fase_04/analysis.sh Analysis/ Emulation_Raw_Data/05022025_1742
+./Scripts/fase_04/analysis.sh Analysis/ Emulation_Raw_Data/05022025_1742/
 ```
 > Warning
-> The first path parameter need to end with '/'
+> The first and second parameter need to end with '/'
 
 ## Contact
 
