@@ -1,6 +1,6 @@
 set -e
 
-WORK_DIR="/wp3-experiment/Volumes/Output"
+WORK_DIR="./Volumes/Output"
 
 # Remove Every file and Directory inside the Folder Output
 rm -f -r $WORK_DIR

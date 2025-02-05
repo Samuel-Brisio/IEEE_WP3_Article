@@ -15,7 +15,7 @@ if [ -z "$2" ]; then
 fi
 
 FILE_NAME=$1
-OUTPUT_VOL="/wp3-experiment/Volumes/Output"
+OUTPUT_VOL="./Volumes/Output"
 WORKDIR=$2
 
 # Compact the files inside the folder Output
