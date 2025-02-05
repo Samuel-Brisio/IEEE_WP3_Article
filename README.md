@@ -15,7 +15,7 @@ This repository contains the simulation file and the necessary codes to process 
 
 `Scripts` : This folder contains multiple scripts responsible for collecting metrics and running the experiment.
 
-`Volumes` : This folder temporarily holds the output files from the emulation and stores data from real IoT devices used to emulate IoT devices in the experiment.
+`Volumes` : This folder is shared between the experiment and our system. It temporarily holds the output files from the emulation and stores data from real IoT devices, which are used by the emulated IoT devices to simulate real devices in the experiment.
 
 ### Files
 
