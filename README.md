@@ -78,9 +78,12 @@ Go to the folder "Imagens", then read the README for the instructions to create 
 Inside the folder of this repository execute the following commandas.
 
 ##### Create the Kubernet Environment
+Execute the script located in the repository's root folder.
+
 ```
 ./setup_environment.sh
 ```
+> Warning: This process will take approximately 1 hour.
 
 ##### Isolate the Environment
 
