@@ -141,17 +141,22 @@ sudo ./Scripts/fase_04/batch.sh <Number-of-Emulation>
 sudo ./Scripts/fase_04/batch.sh 35
 ```
 
-Each emulation will be save in a compact format inside the folder Emulation_Raw_Data
+This will create a folder `Emulation_Raw_Data/<time_date>`, where each emulation will be save in a compact format inside.
 
 #### Getting the metrics from the raw data
+
+Create a new folder where the analysis will be saved.
+
 ```
 mkdir Analysis
 ```
 
+And execute the script to compute the metrics.
+
 ```
 ./Scripts/fase_04/analysis.sh <OUTPUT_DIR> <RAW_DATA_DIR>
 # Exemple
-./Scripts/fase_04/analysis.sh Analysis Emulation_Raw_Data
+./Scripts/fase_04/analysis.sh Analysis Emulation_Raw_Data/05022025_1742
 ```
 
 
