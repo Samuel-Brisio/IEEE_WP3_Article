@@ -36,6 +36,7 @@ WORDIR="$BASE_PATH/Emulation_Raw_Data/$current_date"_"$current_time"
 mkdir -p "$WORDIR"
 
 OUTPUT_VOL="$BASE_PATH/Volumes/Output"
+mkdir -p "$OUTPUT_VOL"
 
 for i in $(seq 0 $((ITER-1)))
 do
